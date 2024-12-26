@@ -1,0 +1,73 @@
+
+----
+
+# Узнать версию CUDA
+nvidia-smi
+
+----
+
+# Папка dgai создается в 'D:\ProgramFiles\Python\Anaconda3\envs"
+conda create -n dgai
+
+conda init
+
+----
+
+conda activate dgai
+
+conda install jupyterlab ipykernel
+
+# Добавить виртуальное окружение в Jupyter Lab
+python -m ipykernel install --user --name=dgai --display-name "Python (dgai)"
+
+conda deactivate
+
+----
+
+#conda remove --name ENV_NAME --all
+conda remove --name dgai --all
+
+conda env list
+
+# Искать в: "папка_пользователя\AppData\Roaming\jupyter\kernels"
+jupyter kernelspec list
+
+----
+
+# В моем случае (после выбора опциий на сайте) https://pytorch.org/get-started/locally/
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+
+# Chapter 2
+conda install matplotlib
+
+# Chapter 5:
+conda install pandas
+conda install Pillow
+
+# Chapter 6
+#conda install albumentations
+conda install -c conda-forge albumentations
+
+# Chapter 10
+conda install transformers
+
+# Chapter 13
+conda install music21
+
+# Chapter 14
+conda install pretty_midi
+
+# Chapter 15
+conda install datasets einops diffusers openai
+
+# Chapter 16
+conda install --upgrade openai langchain_openai langchain
+conda install wolframalpha langchainhub
+conda install --upgrade --quiet wikipedia
+
+----
+
+# Запуск
+jupyter lab
+
+----
